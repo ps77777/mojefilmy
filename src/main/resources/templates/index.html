@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="Windows-88592">
+    <title th:text="${header}"></title>
+</head>
+<body>
+<h1></h1>
+<h3>Katalog filmowy</h3>
+<table border="1">
+    <tr bgcolor="aqua">
+        <td width="40px" height="60px">Tytuł</td>
+        <td width="40px" height="60px">Rodzaj filmu</td>
+        <td width="40px" height="60px">Kraj produkcji</td>
+        <td width="40px" height="60px">Rok produkcji</td>
+    </tr>
+    <tr th:each="film : ${listaWszystkichFilmow}">
+        <td th:text="${film.tytul}">Tytuł</td>
+        <td th:text="${film.typ}">Rodzaj filmu</td>
+        <td th:text="${film.krajProdukcji}">Kraj produkcji</td>
+        <td th:text="${film.rokProdukcji}">Rok produkcji</td>
+    </tr>
+</table>
+
+</body>
+<ml>
