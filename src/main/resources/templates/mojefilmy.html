@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="pl" xmlns:th="http://thymleaf.org">
 <head>
     <meta charset="Windows-88592">
     <title th:text="${header}"></title>
 </head>
 <body>
 <h1></h1>
-<h3>Katalog Twoich filmów</h3>
+<h3>Twoje filmy</h3>
 <table border="1">
     <tr bgcolor="aqua">
         <td width="40px" height="60px">Login</td>
@@ -15,10 +15,9 @@
     </tr>
     <tr th:each="film : ${listaMoichFilmowKontroler}">
         <td th:text="${film.login}">Login</td>
-        <td th:text="${film.tytul}">Film</td>
+        <td><a href="/film/film.tytul" th:text="${film.tytul}">Film</a>
         <td th:text="${film.ocena}">Ocena</td>
     </tr>
 </table>
-
 </body>
 </html>

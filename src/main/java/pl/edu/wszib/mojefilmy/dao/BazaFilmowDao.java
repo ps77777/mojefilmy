@@ -7,4 +7,5 @@ import pl.edu.wszib.mojefilmy.domain.BazaFilmow;
 
 @Repository
 public interface BazaFilmowDao extends CrudRepository<BazaFilmow, String> {
+    BazaFilmow findByTytul(String nazwa);
 }

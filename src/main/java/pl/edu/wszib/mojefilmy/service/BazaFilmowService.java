@@ -21,4 +21,10 @@ public class BazaFilmowService {
         bazaFilmowDao.findAll().forEach(listaWszystkichFilmow::add);
         return listaWszystkichFilmow;
     }
+
+    public BazaFilmow getPojedynczyFilm(String tytul) {
+        BazaFilmow pojedynczyFilm = bazaFilmowDao.findByTytul(tytul);
+        return pojedynczyFilm;
+    }
+
 }
