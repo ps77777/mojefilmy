@@ -15,7 +15,7 @@
     </tr>
     <tr th:each="film : ${listaMoichFilmowKontroler}">
         <td th:text="${film.login}">Login</td>
-        <td><a href="/film/film.tytul" th:text="${film.tytul}">Film</a>
+        <td><a th:href="|/film/${film.tytul}|" th:text="${film.tytul}">Film</a></td>
         <td th:text="${film.ocena}">Ocena</td>
     </tr>
 </table>
