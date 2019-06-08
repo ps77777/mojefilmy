@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<title >Logowanie do profilu</title>
+<form th:action="@{/login}" th:object="${formularzLogowania}" method="post">
+                <p th:if="${bledneDane}" class="error">Login nie istnieje</p>
+    <label for="username">User</label>
+    <input type="username" id="username" name="username" autofocus="autofocus"/>
+
+    <label for="password">Hasło</label>
+    <input type="password" id="password" name="password"/>
+    <br/>
+    <input type="submit" value="Logowanie"/>
+</form>
+</body>
+</html>
