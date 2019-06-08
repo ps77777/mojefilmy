@@ -7,6 +7,6 @@ import pl.edu.wszib.mojefilmy.domain.MojeFilmy;
 
 
 @Repository
-public interface MojeFilmyDao extends CrudRepository<MojeFilmy, String> {
+public interface MojeFilmyDao extends CrudRepository<MojeFilmy, Integer> {
     MojeFilmy findAllByLogin(String login);
 }

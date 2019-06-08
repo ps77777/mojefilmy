@@ -26,5 +26,4 @@ public class BazaFilmowService {
         BazaFilmow pojedynczyFilm = bazaFilmowDao.findByTytul(tytul);
         return pojedynczyFilm;
     }
-
 }

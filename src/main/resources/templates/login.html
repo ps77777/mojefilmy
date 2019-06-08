@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Logowanie</title>
 </head>
 <body>
 <title >Logowanie do profilu</title>
 <form th:action="@{/login}" th:object="${formularzLogowania}" method="post">
-                <p th:if="${bledneDane}" class="error">Login nie istnieje</p>
+                <p th:if="${bledneDane}" class="error">Login lub hasło nie poprawne</p>
     <label for="username">User</label>
     <input type="username" id="username" name="username" autofocus="autofocus"/>
 
@@ -15,6 +15,19 @@
     <input type="password" id="password" name="password"/>
     <br/>
     <input type="submit" value="Logowanie"/>
+</form>
+<h1></h1>
+<h1></h1>
+<form th:action="@{/rejestracja}" th:object="${formularzRejestracji}" method="post">
+    <p th:if="${userIstnieje}" class="error">Taki user już istnieje</p>
+    <p th:if="${wypelnijPola}" class="error">Uzupełnij wszystkie pola</p>
+    <label for="loginName">Nowy login</label>
+    <input type="loginName" id="loginName" name="loginName" autofocus="autofocus"/>
+
+    <label for="password">Hasło</label>
+    <input type="password" id="haslo" name="password"/>
+    <br/>
+    <input type="submit" value="Rejestracja"/>
 </form>
 </body>
 </html>

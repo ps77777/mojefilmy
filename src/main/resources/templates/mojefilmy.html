@@ -19,5 +19,16 @@
         <td th:text="${film.ocena}">Ocena</td>
     </tr>
 </table>
+<h1></h1>
+<form th:action="@{/dodajFilm}" th:object="${mojeFilmy}" method="post">
+<!--    <p th:if="${userIstnieje}" class="error">Taki login już istnieje</p>-->
+    <label for="tytul">Dodaj swój film</label>
+    <input type="tytul" id="tytul" name="tytul" autofocus="autofocus"/>
+
+    <label for="ocena">Ocena</label>
+    <input type="number" id="ocena" name="ocena"/>
+    <br/>
+    <input type="submit" value="Nowy film"/>
+</form>
 </body>
 </html>

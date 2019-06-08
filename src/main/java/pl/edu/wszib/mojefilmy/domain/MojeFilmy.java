@@ -9,15 +9,15 @@ import javax.persistence.Id;
 public class MojeFilmy {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private String pk;
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Integer pk;
     private String login;
     private String tytul;
-    private String ocena;
+    private int ocena;
 
     public MojeFilmy(){};
 
-    public MojeFilmy(String login, String tytul, String ocena) {
+    public MojeFilmy(String login, String tytul, int ocena) {
         this.login = login;
         this.tytul = tytul;
         this.ocena = ocena;
@@ -40,11 +40,11 @@ public class MojeFilmy {
         this.tytul = tytul;
     }
 
-    public String getOcena() {
+    public int getOcena() {
         return ocena;
     }
 
-    public void setOcena(String ocena) {
+    public void setOcena(int ocena) {
         this.ocena = ocena;
     }
 }

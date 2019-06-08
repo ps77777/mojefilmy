@@ -1,4 +1,4 @@
-package pl.edu.wszib.mojefilmy.controller.logowanie;
+package pl.edu.wszib.mojefilmy.logowanie;
 
 public class FormularzLogowania {
     private String username;

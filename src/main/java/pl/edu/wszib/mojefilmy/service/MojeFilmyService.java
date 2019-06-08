@@ -31,4 +31,7 @@ public class MojeFilmyService {
         return listaMoichFilmow;
     }
 
+    public void dodajNowyFilm(MojeFilmy mojeFilmy1){
+        mojeFilmyDao.save(mojeFilmy1);
+    }
 }
