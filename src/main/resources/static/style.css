@@ -1,0 +1,23 @@
+body
+{
+    font-family: Georgia;
+    font-size:20px;
+    background-color:#201209;
+    color:white;
+}
+h1
+{
+    font-size:48px;
+}
+a:link
+{
+  color:black;
+}
+a:visited
+{
+  color:purple;
+}
+a:hover
+{
+color:red
+}
